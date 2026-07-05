@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "Notes": "note-application-crud",
+    "default": "note-application-crud"
+  },
+  "targets": {},
+  "etags": {}
+}
