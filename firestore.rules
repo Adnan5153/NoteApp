@@ -1,0 +1,14 @@
+rules_version = '2';
+
+// Firestore security rules for the Notes app (note-application-crud).
+//
+// Development rules — open read/write to the `notes` collection.
+// Replace these with authenticated, per-user rules before shipping
+// to production (e.g. `request.auth != null && resource.data.ownerUid == request.auth.uid`).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /notes/{noteId} {
+      allow read, write: if true;
+    }
+  }
+}
